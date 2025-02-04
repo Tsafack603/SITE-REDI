@@ -389,6 +389,25 @@
     width: 40px; /* Largeur des logos */
     height: auto; /* Garder la proportion */
 }
+        @keyframes clignoter-couleur {
+    0% { color: red; }
+    50% { color: blue; }
+    100% { color: red; }
+  }
+  
+  .clignotant-couleur {
+    animation: clignoter-couleur 1s infinite;
+  }
+  @keyframes clignoter {
+    0% { opacity: 1; } /* Texte visible */
+    50% { opacity: 0; } /* Texte invisible */
+    100% { opacity: 1; } /* Texte visible à nouveau */
+  }
+  
+  .clignotant {
+    animation: clignoter 1s infinite; /* 1s = durée de l'animation, infinite = répétition */
+  }
+
 
     </style>
 </head>
@@ -403,7 +422,7 @@
 <!--build-->
 <section class="build" id="build">
     <div>
-        <p><h1>Bienvenue chez REDI-ELECT SARL <br><br></h1> 
+        <p><h1 class="clignotant-couleur">Bienvenue chez REDI-ELECT SARL <br><br></h1> 
         * LA QUALITE ASSURE LA GARANTIE.<br> <br> * Découvrez Chaque jour un nouveau produit a un prix tres abordable.<br><br> * Ne manquez pas nos nouvelles arrivages legrand de la gamme dooxie. <br><br>* Plongez dans l' univers du luxe avec la gamme dooxie !</p>
     </div>
 </section>
